@@ -1,0 +1,21 @@
+CREATE TABLE site_indicator_values (
+  site_name TEXT NOT NULL,
+  axe_energetique TEXT,
+  enjeux TEXT,
+  normes TEXT,
+  critere TEXT,
+  code TEXT NOT NULL,
+  indicateur TEXT,
+  processus TEXT,
+  frequence TEXT,
+  unite TEXT,
+  type TEXT,
+  formule TEXT,
+  year INTEGER NOT NULL,
+  value NUMERIC,
+  cible NUMERIC,
+  variation TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (site_name, code, year)
+);
